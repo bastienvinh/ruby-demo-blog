@@ -1,0 +1,28 @@
+<%= error_messages_for(f.object) %>
+
+<table summary="Page form fields">
+  <tr>
+    <th>Firstname</th>
+    <td><%= f.text_field(:first_name) %></td>
+  </tr>
+  <tr>
+    <th>Lastname</th>
+    <td><%= f.text_field(:last_name) %></td>
+  </tr>
+  <tr>
+    <th>Email</th>
+    <td><%= f.email_field(:email) %></td>
+  </tr>
+  <tr>
+    <th>Username</th>
+    <% if @is_new_username %>
+    <td><%= f.text_field(:username) %></td>
+    <% else %>
+    <td><%= f.object.username %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <th>Password</th>
+    <td><%= f.password_field(:password) %></td>
+  </tr>
+</table>

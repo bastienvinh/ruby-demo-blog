@@ -1,0 +1,11 @@
+<h1>Hello World !!!</h1>
+<%= 1 + 1 %>
+<br />
+<% @array.each do |n| %>
+  <%= n %><br />
+<% end %>
+<br />
+<%= link_to('Hello Page without parameters', { :action => 'hello' }) %>
+<%= link_to('Hello Page with parameters', { :action => 'hello', :page => 5, :id => 20 }) %>
+
+<p><%= link_to('Javascript test', '#', :onclick => "jsRoar('Javascript')") %></p>
